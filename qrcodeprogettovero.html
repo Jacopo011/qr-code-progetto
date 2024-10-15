@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifica Frase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #frase {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input, button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="frase">Ciao, questa è la frase da modificare!</div>
+    <input type="text" id="inputFrase" placeholder="Inserisci nuova frase">
+    <button onclick="modificaFrase()">Modifica</button>
+
+    <script>
+        function modificaFrase() {
+            var nuovaFrase = document.getElementById('inputFrase').value;
+            if(nuovaFrase.trim() !== "") {
+                document.getElementById('frase').innerText = nuovaFrase;
+            } else {
+                alert("Inserisci una frase valida!");
+            }
+        }
+    </script>
+</body>
+</html>
